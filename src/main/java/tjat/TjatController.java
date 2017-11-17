@@ -10,7 +10,7 @@ import java.util.List;
 @Controller
 public class TjatController {
 	
-	private List messages = new ArrayList(); 
+	private List<Message> messages = new ArrayList<>(); 
 
     @RequestMapping("/")
     public String index() {
@@ -22,7 +22,7 @@ public class TjatController {
     		@RequestParam(value="name", required=false, defaultValue="???") String name,
     		@RequestParam(value="message", required=false, defaultValue="Nothing") String message,
     		Model model) {
-    	messages.add(message);
+    	messages.add(0, new Message(name, message));
         model.addAttribute("name", name);
         model.addAttribute("message", message);
         model.addAttribute("messages", messages);

@@ -6,21 +6,18 @@
 	</head>
 	<body>
 		<form action="/tjat" method="get">
-			Namn: <input name="name" type="text" th:value="${name}" />
-			Meddelande: <input name="message" type="text" />
-			
-	    	<input type="submit" hidden="true" />
+			<fieldset>
+				<p>Namn: <input name="name" type="text" th:value="${name}" /></p>
+				<p>Meddelande: <input name="message" type="text" /></p>
+				
+		    	<input type="submit" hidden="true" />
+	    	</fieldset>
 		</form>
-		<table>
-			<tr>
-				<td th:text="${name}">nn</td>
-				<td th:text="${message}">nn</td>
-			</tr>
-		</table>
-		
+	
 		<table>
 		    <tr th:each="message : ${messages}">
-		        <td th:text="${message}">1</td>
+		        <th th:text="${message.name}">1</th>
+		        <td th:text="${message.message}">2</td>
     		</tr>
 		</table>
     
