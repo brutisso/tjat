@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>::: Tjat :::</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<form action="/tjat" method="get">
+			Namn: <input name="name" type="text" th:value="${name}" />
+			Meddelande: <input name="message" type="text" />
+			
+	    	<input type="submit" hidden="true" />
+		</form>
+		<table>
+			<tr>
+				<td th:text="${name}">nn</td>
+				<td th:text="${message}">nn</td>
+			</tr>
+		</table>
+	</body>
+</html>
