@@ -17,5 +17,12 @@
 				<td th:text="${message}">nn</td>
 			</tr>
 		</table>
+		
+		<table>
+		    <tr th:each="message : ${messages}">
+		        <td th:text="${message}">1</td>
+    		</tr>
+		</table>
+    
 	</body>
 </html>
